@@ -159,6 +159,6 @@ const books = [
     year: 2015,
     price: 32000,
   },
-]
+];
 
-export default books
+export default books;
