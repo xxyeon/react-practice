@@ -1,4 +1,5 @@
 import books from '@/mock/book.js'
+import { Link } from 'react-router-dom'
 
 function BookList({ setReadingBookTitle, keyword }) {
   return (
@@ -9,7 +10,9 @@ function BookList({ setReadingBookTitle, keyword }) {
           .map((book) => {
             return (
               <li style={{ listStyle: 'none' }} key={book.id}>
-                {book.title} - {book.author}
+                <Link to={`/books/${book.id}`}>
+                  {book.title} - {book.author}
+                </Link>
                 <button
                   style={{ padding: '0.2rem 0.4rem', marginLeft: 4 }}
                   onClick={() => {

@@ -3,6 +3,7 @@ import './App.css'
 import BookList from '@/components/BookList'
 import ReadingBook from '@/components/ReadingBook'
 import Footer from '@/components/Footer'
+import Layout from '@/components/Layout'
 function Container({ children, title }) {
   console.log(children)
   return (
@@ -25,7 +26,7 @@ function App() {
   )
 
   return (
-    <>
+    <Layout>
       <Container title='나만의 책장'>
         <ReadingBook bookTitle={readingBookTitle} setKeyword={setKeyword} />
       </Container>
@@ -33,7 +34,7 @@ function App() {
       <Container title='만든이'>
         <Footer />
       </Container>
-    </>
+    </Layout>
   )
 }
 
