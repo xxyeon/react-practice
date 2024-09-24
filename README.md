@@ -49,3 +49,7 @@ const { bookId } = useParams() //{bookId:'20'}을 반환
 ```javascript
 const bookId = new URL(url).searchParams.get('key')
 ```
+
+### .find(condition)
+
+배열에서 조건에 맞는 첫번째 요소 반환
